@@ -1,0 +1,19 @@
+@import url(bootstrap.min.css);
+@import url(bootstrap-theme.min.css);
+.row {
+  margin: 15px 0; }
+
+.btn-group .btn-secondary {
+  background-color: #fff;
+  border: 1px solid #ccc; }
+  .btn-group .btn-secondary:hover {
+    background-color: #ddd; }
+
+.input-group[class*=col-],
+.list-group {
+  padding: 0 15px;
+  box-shadow: none; }
+
+.completed {
+  text-decoration: line-through;
+  background-color: #dadada; }
