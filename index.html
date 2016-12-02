@@ -13,29 +13,27 @@
 
     <div class="container">
         <div class="row">
-            <h1>To-Do</h1>
+            <div class="col-md-4"></div>
+            <h1 id="title" class="col-md-4">To-Do</h1>
         </div>
         <div class="row">
-            <!-- <div class="form-group col-md-4">
-                <label for="addTask">
-                    <input type="text" id="addTask" class="form-control" placeholder="Add" aria-describedby="plus-sign">
-                    <span class="input-group-addon" id="plus-sign">+</span>
-                </label>
-            </div> -->
-            <div class="input-group col-md-4">
-                <input type="text" id="taskInput" class="form-control" placeholder="Add" aria-describedby="plus-sign">
+            <div class="col-md-4"></div>
+            <div class="input-group col-md-4 col-xs-12">
+                <input type="text" id="taskInput" class="form-control" placeholder="Add a task" aria-describedby="plus-sign" autofocus>
                 <span class="input-group-addon" id="plus-sign"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></span>
             </div>
         </div>
         <div class="row">
-            <div class="btn-group col-md-4" role="group" aria-label="Filter tasks">
-                <button type="button" class="filter btn btn-secondary">All</button>
-                <button type="button" class="filter btn btn-secondary">Completed</button>
-                <button type="button" class="filter btn btn-secondary">Incomplete</button>
+            <div class="col-md-4"></div>
+            <div class="btn-group col-md-4 col-xs-12" role="group" aria-label="Filter tasks">
+                <button type="button" class="filter btn btn-secondary btn-primary" value="all">All</button><!-- remove space
+             --><button type="button" class="filter btn btn-secondary" value="incomplete">Incomplete</button><!-- remove space
+             --><button type="button" class="filter btn btn-secondary" value="completed">Completed</button>
             </div>
         </div>
         <div class="row">
-            <ul id="taskList" class="list-group col-md-4"></ul>
+            <div class="col-md-4"></div>
+            <ul id="taskList" class="list-group col-md-4 col-xs-12"></ul>
         </div>
     </div>
 

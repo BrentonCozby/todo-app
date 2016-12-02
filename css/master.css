@@ -1,7 +1,19 @@
 @import url(bootstrap.min.css);
 @import url(bootstrap-theme.min.css);
+#title {
+  text-align: center; }
+
+#plus-sign {
+  cursor: pointer; }
+
 .row {
   margin: 15px 0; }
+
+.btn-group {
+  text-align: center; }
+
+.btn-group > .btn {
+  float: none; }
 
 .btn-group .btn-secondary {
   background-color: #fff;
@@ -14,6 +26,18 @@
   padding: 0 15px;
   box-shadow: none; }
 
+.list-group-item:first-child,
+.list-group-item:last-child {
+  border-radius: 0; }
+
+.list-group-item {
+  cursor: pointer; }
+
+.glyphicon-remove {
+  float: right;
+  color: #ccc;
+  cursor: pointer; }
+
 .completed {
   text-decoration: line-through;
-  background-color: #dadada; }
+  background-color: #efefef; }
