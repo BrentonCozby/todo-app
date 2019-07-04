@@ -1,55 +1,60 @@
 {
-    "name": "todo-app",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "build-js": "browserify js/main.js -o js/bundle.js",
-        "watch-js": "watchify js/main.js -o js/bundle.js --poll -v",
-        "build-js-min": "browserify js/main.js | uglifyjs -o js/bundle.min.js",
-        "sass": "node-sass css/master.scss css/master.css",
-        "autoprefixer": "postcss --use autoprefixer css/master.css -d css",
-        "build-css": "npm run sass && npm run autoprefixer",
-        "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-        "cleancss": "cleancss -o css/master.min.css css/master.css ",
-        "build-css-min": "npm run sass && npm run autoprefixer && npm run cleancss",
-        "build-all": "npm run build-js & npm run build-css",
-        "build-all-min": "npm run build-js-min & npm run build-css-min"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/BrentonCozby/todo-app.git"
-    },
-    "author": "BrentonCozby",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/BrentonCozby/todo-app/issues"
-    },
-    "homepage": "https://github.com/BrentonCozby/todo-app#readme",
-    "browserify": {
-        "transform": [
-            [
-                "babelify", {
-                    "presets": [
-                        "es2015"
-                    ]
-                }
-            ],
-            "envify"
-        ]
-    },
-    "devDependencies": {
-        "autoprefixer": "^6.5.2",
-        "babel-preset-es2015": "^6.18.0",
-        "browserify": "^13.1.1",
-        "clean-css": "^3.4.21",
-        "node-sass": "^3.10.1",
-        "postcss-cli": "^2.6.0",
-        "uglifyjs": "^2.4.10",
-        "watchify": "^3.7.0"
-    },
-    "dependencies": {
-        "envify": "^3.4.1",
-        "babelify": "^7.3.0"
-    }
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-js": "browserify js/main.js -o js/bundle.js",
+    "watch-js": "watchify js/main.js -o js/bundle.js --poll -v",
+    "build-js-min": "browserify js/main.js | uglifyjs -o js/bundle.min.js",
+    "sass": "node-sass css/master.scss css/master.css",
+    "autoprefixer": "postcss --use autoprefixer css/master.css -d css",
+    "build-css": "npm run sass && npm run autoprefixer",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "cleancss": "cleancss -o css/master.min.css css/master.css ",
+    "build-css-min": "npm run sass && npm run autoprefixer && npm run cleancss",
+    "build-all": "npm run build-js & npm run build-css",
+    "build-all-min": "npm run build-js-min & npm run build-css-min",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrentonCozby/todo-app.git"
+  },
+  "author": "BrentonCozby",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrentonCozby/todo-app/issues"
+  },
+  "homepage": "https://github.com/BrentonCozby/todo-app#readme",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ],
+      "envify"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.2",
+    "babel-preset-es2015": "^6.18.0",
+    "browserify": "^13.1.1",
+    "clean-css": "^3.4.21",
+    "node-sass": "^3.10.1",
+    "postcss-cli": "^2.6.0",
+    "uglifyjs": "^2.4.10",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "envify": "^3.4.1",
+    "babelify": "^7.3.0",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
