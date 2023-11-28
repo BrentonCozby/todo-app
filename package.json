@@ -50,6 +50,6 @@
     },
     "dependencies": {
         "envify": "^3.4.1",
-        "babelify": "^7.3.0"
+        "babelify": "^8.0.0"
     }
 }
