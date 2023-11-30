@@ -49,7 +49,7 @@
         "watchify": "^3.7.0"
     },
     "dependencies": {
-        "envify": "^3.4.1",
+        "envify": "^4.0.0",
         "babelify": "^7.3.0"
     }
 }
